@@ -2,16 +2,16 @@
 
 ## usersテーブル (ユーザー情報)
 
-| Column          | Type   | Options                        |
-| --------------- | ------ | ------------------------------ |
-| nickname        | string | null: false                    |
-| email           | string | null: false, unique: true      |
-| password        | string | null: false                    |
-| last_name       | string | null: false                    |
-| first_name      | string | null: false                    |
-| last_name_kana  | string | null: false                    |
-| first_name_kana | string | null: false                    |
-| birthday        | date   | null: false                    |
+| Column             | Type   | Options                        |
+| ------------------ | ------ | ------------------------------ |
+| nickname           | string | null: false                    |
+| email              | string | null: false, unique: true      |
+| encrypted_password | string | null: false                    |
+| last_name          | string | null: false                    |
+| first_name         | string | null: false                    |
+| last_name_kana     | string | null: false                    |
+| first_name_kana    | string | null: false                    |
+| birthday           | date   | null: false                    |
 
 ### Association
 
@@ -59,6 +59,7 @@
 | area_id          | integer    | null: false                    |
 | municipality     | string     | null: false                    |
 | address          | string     | null: false                    |
+| building_name    | string     |                                |
 | phone_number     | string     | null: false                    |
 
 ### Association
