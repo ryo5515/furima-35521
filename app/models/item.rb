@@ -9,7 +9,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :area_id
   belongs_to_active_hash :days_delivery_id
 
-  with_options presence: ture do
+  with_options presence: true do
     validates :image
     validates :product_name
     validates :description
