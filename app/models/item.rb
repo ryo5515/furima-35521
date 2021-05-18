@@ -3,11 +3,11 @@ class Item < ApplicationRecord
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to_active_hash :category_id
-  belongs_to_active_hash :status_id
-  belongs_to_active_hash :burden_id
-  belongs_to_active_hash :area_id
-  belongs_to_active_hash :days_delivery_id
+  belongs_to_active_hash :category
+  belongs_to_active_hash :status
+  belongs_to_active_hash :burden
+  belongs_to_active_hash :area
+  belongs_to_active_hash :day_delivery
 
   with_options presence: true do
     validates :image
@@ -17,7 +17,7 @@ class Item < ApplicationRecord
     validates :status_id
     validates :burden_id
     validates :area_id
-    validates :days_delivery_id
+    validates :day_delivery_id
     validates :price, inclusion: { in: 300..9_999_999 }, format: { with: /\A[0-9]+\z/ }
   end
 
@@ -26,7 +26,7 @@ class Item < ApplicationRecord
     validates :status_id
     validates :burden_id
     validates :area_id
-    validates :days_delivery_id
+    validates :day_delivery_id
   end
   validates :price, numericality: true
 
