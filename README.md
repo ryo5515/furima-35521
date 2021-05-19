@@ -42,7 +42,7 @@
 | status_id        | integer    | null: false                    |
 | burden_id        | integer    | null: false                    |
 | area_id          | integer    | null: false                    |
-| days_delivery_id | integer    | null: false                    |
+| day_delivery_id  | integer    | null: false                    |
 | price            | integer    | null: false                    |
 
 ### Association
