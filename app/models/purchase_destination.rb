@@ -1,6 +1,6 @@
 class PurchaseDestination
   include ActiveModel::Model
-  attr_accessor :user_id, :item_id, :purchase_id, :postal_code, :area_id, :municipality, :address, :building_name, :phone_number, :token
+  attr_accessor :user_id, :item_id, :postal_code, :area_id, :municipality, :address, :building_name, :phone_number, :token
 
   with_options presence: true do
     validates :token
