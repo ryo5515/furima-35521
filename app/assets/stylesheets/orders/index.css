@@ -144,6 +144,7 @@
   width: 50%;
   margin: 0 auto;
   margin-top: 50px;
+  text-align: center;
 }
 
 .buy-red-btn {
@@ -154,4 +155,14 @@
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+  margin-bottom: 4vh;
+}
+
+/* 追加実装もどるボタン */
+.back-gray-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 15px 35%;
+  text-decoration: none;
 }
