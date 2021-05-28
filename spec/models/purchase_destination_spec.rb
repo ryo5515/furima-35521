@@ -26,62 +26,62 @@ RSpec.describe PurchaseDestination, type: :model do
       it "紐づくuserがいないと購入出来ない" do
         @purchase_destination.user_id = nil
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("User can't be blank")
+        expect(@purchase_destination.errors.full_messages).to include("Userを入力してください")
       end
       it "紐づくitemがないと購入出来ない" do
         @purchase_destination.item_id = nil
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("Item can't be blank")
+        expect(@purchase_destination.errors.full_messages).to include("Itemを入力してください")
       end
       it "tokenがないと購入できない" do
         @purchase_destination.token = nil
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("Token can't be blank")
+        expect(@purchase_destination.errors.full_messages).to include("クレジットカード情報を入力してください")
       end
       it "postal_codeが空だと購入出来ない" do
         @purchase_destination.postal_code = ""
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("Postal code can't be blank")
+        expect(@purchase_destination.errors.full_messages).to include("郵便番号を入力してください")
       end
       it "postal_codeにハイフンがないと購入出来ない" do
         @purchase_destination.postal_code = "1234567"
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("Postal code Input correctly")
+        expect(@purchase_destination.errors.full_messages).to include("郵便番号にはハイフンを入れてください")
       end
       it "area_idが未選択だと購入出来ない" do
         @purchase_destination.area_id = 1
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("Area Select")
+        expect(@purchase_destination.errors.full_messages).to include("都道府県を選択してください")
       end
       it "municipalityが空だと購入出来ない" do
         @purchase_destination.municipality =""
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("Municipality can't be blank")
+        expect(@purchase_destination.errors.full_messages).to include("市区町村を入力してください")
       end
       it "addressが空だと購入出来ない" do
         @purchase_destination.address = ""
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("Address can't be blank")
+        expect(@purchase_destination.errors.full_messages).to include("番地を入力してください")
       end
       it "phone_numberが空だと購入出来ない" do
         @purchase_destination.phone_number = ""
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("Phone number can't be blank")
+        expect(@purchase_destination.errors.full_messages).to include("電話番号を入力してください")
       end
       it "phone_numberに数値以外があると購入出来ない" do
         @purchase_destination.phone_number = "090-1234-5678"
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("Phone number Input only number")
+        expect(@purchase_destination.errors.full_messages).to include("電話番号にはハイフンを入れずに11桁以内の数字を入力してください")
       end
       it "phone_numberに英字があると購入できない" do
         @purchase_destination.phone_number = "num12345678"
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("Phone number Input only number")
+        expect(@purchase_destination.errors.full_messages).to include("電話番号にはハイフンを入れずに11桁以内の数字を入力してください")
       end
       it "phone_nimberが11桁以内でないと購入できない" do
         @purchase_destination.phone_number = "090123456789"
         @purchase_destination.valid?
-        expect(@purchase_destination.errors.full_messages).to include("Phone number Input only number")
+        expect(@purchase_destination.errors.full_messages).to include("電話番号にはハイフンを入れずに11桁以内の数字を入力してください")
       end
     end
   end
