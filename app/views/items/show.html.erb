@@ -34,6 +34,11 @@
         <%= link_to "購入画面に進む", item_purchases_path(@item.id), class:"item-red-btn"%>
       <% end %>
     <% end %>
+      <%# 追加実装 %>
+      <div class='buy-btn'>
+        <%=link_to 'もどる', root_path, class:"back-gray-btn" %>
+      </div>
+      <%# /追加実装 %>
 
     <div class="item-explain-box">
       <span><%= @item.description %></span>

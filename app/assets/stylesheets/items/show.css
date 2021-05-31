@@ -60,6 +60,15 @@
   padding: 2vh 10vw;
 }
 
+/* 追加実装もどるボタン分 */
+.back-gray-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 15px 35%;
+  text-decoration: none;
+}
+
 .or-text {
   font-size: 20px;
 }
