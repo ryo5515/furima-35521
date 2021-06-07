@@ -1,3 +1,6 @@
+# 本番環境
+https://furima-35521.herokuapp.com/
+
 # テーブル設計
 
 ## usersテーブル (ユーザー情報)
